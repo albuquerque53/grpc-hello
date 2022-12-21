@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  api:
+    container_name: 'grpc_api'
+    image: golang:1.19
+    volumes:
+      - ../:/opt/api
+    working_dir: '/opt/api'
+    ports:
+      - 2001:2001
+    command: tail -f /dev/null
