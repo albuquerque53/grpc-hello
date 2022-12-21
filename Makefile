@@ -4,9 +4,11 @@ down:
 	docker-compose -f build/docker-compose.yml down || docker compose -f build/docker-compose.yml down
 app:
 	docker exec -it grpc_api /bin/bash
+install:
+	go mod tidy
 api:
 	go run ./cmd/main.go -op=serve
 call:
-	go run ./cmd/main.go -op=call $(filter-out $@,$(MAKECMDGOALS))
+	go run ./cmd/main.go -op=call "$(filter-out $@,$(MAKECMDGOALS))"
 %:
 	@:
