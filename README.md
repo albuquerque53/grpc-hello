@@ -54,7 +54,7 @@ make install
 make api
 ```
 
-> Now you have the API running on the port 9000 (in your host and container)
+> Now you have the API running on the port 9000
 
 
 #### Making gRPC calls with Client
@@ -91,7 +91,7 @@ make app
 make install && make api
 ```
 
-> Now you have the API running on the port 9000 (in your host and container)
+> Now you have the API running on the port 9000 (of your host and container)
 
 
 #### Making gRPC calls with Client
